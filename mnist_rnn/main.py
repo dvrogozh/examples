@@ -95,6 +95,8 @@ def main():
                         help='enables CUDA training')
     parser.add_argument('--mps', action="store_true", default=False,
                         help="enables MPS training")
+    parser.add_argument('--xpu', action='store_true', default=False,
+                        help='enables XPU training')
     parser.add_argument('--dry-run', action='store_true', default=False,
                         help='quickly check a single pass')
     parser.add_argument('--seed', type=int, default=1, metavar='S',
@@ -109,6 +111,8 @@ def main():
         device = "cuda"
     elif args.mps and not args.cuda:
         device = "mps"
+    elif args.xpu:
+        device = "xpu"
     else:
         device = "cpu"
 
