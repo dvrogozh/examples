@@ -102,13 +102,13 @@ if __name__ == "__main__":
         help="learning rate (default: 0.03)",
     )
     parser.add_argument(
-        "--no_cuda", action="store_true", default=False, help="disables CUDA training"
+        "--no_cuda", action="store_true", help="disables CUDA training"
     )
     parser.add_argument(
-        "--no_mps", action="store_true", default=False, help="disables MPS training"
+        "--no_mps", action="store_true", help="disables MPS training"
     )
     parser.add_argument(
-        "--no_xpu", action="store_true", default=False, help="disables XPU training"
+        "--no_xpu", action="store_true", help="disables XPU training"
     )
     parser.add_argument(
         "--seed", type=int, default=1, metavar="S", help="random seed (default: 1)"
@@ -116,7 +116,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "--save_model",
         action="store_true",
-        default=False,
         help="For saving the current Model",
     )
     parser.add_argument(
@@ -129,7 +128,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "--save-model",
         action="store_true",
-        default=False,
         help="For Saving the current Model",
     )
     parser.add_argument(
