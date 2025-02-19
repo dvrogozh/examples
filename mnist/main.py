@@ -82,7 +82,7 @@ def main():
                         help='learning rate (default: 1.0)')
     parser.add_argument('--gamma', type=float, default=0.7, metavar='M',
                         help='Learning rate step gamma (default: 0.7)')
-    parser.add_argument('--no-cuda', action='store_true', default=False,
+    parser.add_argument('--no-cuda', action='store_true',
                         help='disables CUDA training')
     parser.add_argument('--no-mps', action='store_true',
                         help='disables macOS GPU training')
